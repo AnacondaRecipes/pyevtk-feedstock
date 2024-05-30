@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv 
   noarch: python
 
 requirements:
@@ -49,6 +49,10 @@ about:
   dev_url: https://github.com/paulo-herrera/PyEVTK
 
 extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/49247
+    reason: Dependency for gstools
   recipe-maintainers:
+    - ianaobi
     - xylar
     - MuellerSeb
