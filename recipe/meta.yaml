@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - versioneer
     - pytest-runner
+    - wheel
 
   run:
     - python >=3.6
